@@ -1,0 +1,25 @@
+# Python Developer Technical Test
+
+1.  Given the provided file 20000.txt – find the following using Python code:
+      ✓  Count of instances of the word Nautilus
+      ✓  Count of instances of the word Nemo
+      ✓  The line number of the instance of word Nautilus that is closest to an instance of the word Nemo
+          within the file. Nemo can appear before or after Nautilus and on a different line. Closest is defined
+          by the smallest number of characters between the leading N on Nautilus and Nemo.
+
+
+2.  A date can be formatted as DDMMYY such that 3rd June 2022 can be represented as '030622'. In this format:
+      - YY is always the last two digits of the year.
+      - DD and MM are always padded with a leading zero where required.
+      - The formatted date is always 6 characters long.
+
+      ✓   Using this format write Python code to find the count of palindromic date strings from 1st  January 1970
+          to 31st December 2021. Palindromic means that the date string reads the same forwards and backwards. For
+          example:
+            - 1st January 2000 formats as '010100' and is NOT palindromic
+            - 2nd November 2020 formats as '021120' and is palindromic
+
+
+What we're looking for:
+▪ Clean and understandable code.
+▪ You should aim to get this test back to us within a day but there is no precise time limit.
