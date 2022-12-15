@@ -1,4 +1,5 @@
 from src.models.models import LineDetails, WordDetails
+from datetime import datetime, timedelta
 import os
 
 class problem_1():
@@ -146,3 +147,40 @@ class problem_1():
                     closest_line_no = main_word
 
         return closest_line_no, distance
+
+class problem_2():
+    def __init__(self, start_date, end_date):
+        """Initialise and generate all palindrome dates given the DDMMYY format
+
+        :param start_date: start date for the palindromes
+        :param end_date: end date for the palindromes
+        """
+        self.dates = self.generate_dates(start_date, end_date)
+        self.palindromes = self.determine_palindrome_dates()
+        
+    def generate_dates(self, start_date, end_date):
+        """This will generate and return all the dates in the 'DDMMYY' format
+
+        :param start_date: start date for the palindromes
+        :param end_date: end date for the palindromes
+        :return: 
+        """
+        date_difference = end_date - start_date
+        days = [start_date + timedelta(days=i) for i in range(date_difference.days + 1)]
+        formatted_days = [day.strftime('%d%m%y') for day in days]
+        return formatted_days
+    
+    def determine_palindrome_dates(self):
+        """using the inverse step in an array and list comprehension to iterate
+        we compare the date with its inverse date and only output the ones that match
+
+        :return: list of palindrome dates
+        """
+        return [date for date in self.dates if date == date[::-1]]
+    
+    def get_palindrome_count(self):
+        """A utility function that counts the amount of palindromes
+
+        :return: count of palindrome dates
+        """
+        return len(self.palindromes)
