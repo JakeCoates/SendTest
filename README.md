@@ -45,10 +45,17 @@ ANSWER: Line (assumed starting at 1) 14017
 
 
 ## Problem 2
-I have yet to start problem 2
+For the second problem I have been asked to find all the palindrome dates between two date ranges.
 
+I also used pytest around the application to help me test the results.
+
+I have made it possible to customise what dates you can check calculate between
+
+It converts the date into the string format then uses a comparison of the string reverse stepped to check if it's a palindrome.
+
+There is likely an edge case that exists as you could choose dates between 1820 and 2020 there will be some overlapped output, you could resolve this using a set but it was not the the instructions to deal with duplicated dates. 
 
 ---
-
+ANSWER: 17 dates between 1st January 1970 and 31st December 2020
 
 ---
